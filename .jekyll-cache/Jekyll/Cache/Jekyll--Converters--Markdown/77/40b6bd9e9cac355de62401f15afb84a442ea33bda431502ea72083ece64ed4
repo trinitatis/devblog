@@ -1,0 +1,40 @@
+I"<p>I had a little time to study tonigth.<br />
+I like <font color="cyan">Python</font>, despite the fact that its prospects are not clear.<br />
+I started to figure out the environment. In particular with <font color="cyan">*virtualenv*</font><br />
+and the work of Atom in virtual environment.</p>
+<hr />
+<p>I use Windows.<br />
+Check which modules are installed in the system:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>d:\mypy\python -m pydoc modules
+</code></pre></div></div>
+<p>Creation of virtual environments:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>d:\mypy\python -m venv first_test --system-site-packages --without-pip
+</code></pre></div></div>
+<p>Activate virtual environment <em>first_test</em>:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>d:\mypy&gt;cd first_test  
+d:\mypy\first_test&gt;Scripts\activate  
+&lt; first_test &gt; d:\mypy\first_test&gt;  
+</code></pre></div></div>
+<p>Now, to run Atom in environment <em>first_test</em>, need to start it from terminal:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt; first_test &gt; d:\mypy\first_test&gt;\&lt;path to Atom&gt;atom.exe
+</code></pre></div></div>
+<hr />
+<p>I created a simple script to check what environment Atom is in:</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">sys</span><span class="p">.</span><span class="n">prefix</span><span class="p">)</span> <span class="c1"># point to the current base directory
+</span><span class="k">print</span><span class="p">(</span><span class="n">sys</span><span class="p">.</span><span class="n">base_prefix</span><span class="p">)</span> <span class="c1"># point to the system base directory of the non-virtual environment
+</span></code></pre></div></div>
+<p>In <em>non-virtual</em> environment the output of the script is the same values:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>D:\Python  
+D:\Python
+</code></pre></div></div>
+
+<p>In <em>virtual</em> environment the output of the script is:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>d:\mypy\first_test  
+D:\Python
+</code></pre></div></div>
+<hr />
+<p>For convenience, I have installed two packages in Atom:</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">script</span> <span class="c1">#allows you to run the script in the internal Atom terminal; doesn't support console input  
+</span><span class="n">atom</span><span class="o">-</span><span class="n">python</span><span class="o">-</span><span class="n">run</span> <span class="c1">#allows you to run the script in terminal similar to IDLE-terminal; support console input
+</span></code></pre></div></div>
+:ET
