@@ -1,7 +1,5 @@
 ---
-title: Zero_Sunday
+title: Polymorphism of Python
 published: true
 ---
-I think I did nothing this Sunday..
-* * *
-I read something.
+I read something Lutz..
